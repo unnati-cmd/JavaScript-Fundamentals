@@ -63,8 +63,17 @@
 //     console.log(i);
 // }
 
-//skip every multiple of 3
-for(i=1; i<=20; i++){
-    if(i%3 ===0 ) continue;
-    console.log(i);
+// //skip every multiple of 3
+// for(i=1; i<=20; i++){
+//     if(i%3 ===0 ) continue;
+//     console.log(i);
+// }
+
+//sum of the digits of a number
+let num=prompt("Enter value");
+let count=0;
+while(num>0){
+    count += (num%10);
+    num = Math.floor(num/10);
 }
+console.log(`${count} is the sum of the digits of ${num}`);

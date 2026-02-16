@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+h1{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+#changebutton{
+    height: 30px;
+    width: 70px;
+    padding: 0px 0px;
+    background-color:royalblue;
+    border: 2px solid white;
+    font-size: smaller;
+    font-weight: 600;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#box{
+    background-color:rgb(0,0,0);
+    height: 200px;
+    width: 200px;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+button:active{
+    background-color: pink;
+    scale: 0.95;
+}

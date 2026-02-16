@@ -69,11 +69,11 @@
 //     console.log(i);
 // }
 
-//sum of the digits of a number
-let num=prompt("Enter value");
-let count=0;
-while(num>0){
-    count += (num%10);
-    num = Math.floor(num/10);
-}
-console.log(`${count} is the sum of the digits of ${num}`);
+// //sum of the digits of a number
+// let num=prompt("Enter value");
+// let count=0;
+// while(num>0){
+//     count += (num%10);
+//     num = Math.floor(num/10);
+// }
+// console.log(`${count} is the sum of the digits of ${num}`);

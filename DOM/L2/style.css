@@ -34,7 +34,7 @@ h1{
     border-radius: 10px;
 }
 
-button:active{
+#changebutton:active{
     background-color: pink;
     scale: 0.95;
 }

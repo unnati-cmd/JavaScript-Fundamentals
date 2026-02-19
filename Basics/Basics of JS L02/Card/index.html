@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+            background-color: rgba(58, 54, 54, 0.576);
+        }
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        input{
+            display:block;
+            color: antiquewhite;
+        }
+        #main{
+            padding: 50px;
+            width:100%;
+            height:100%;
+        }
+        .card{
+            max-width: 500px;
+            color:aliceblue;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-top: 40px;
+            border-radius: 20px;
+            display: inline-block;
+            padding: 20px;
+            border: 3 px solid whitesmoke;
+        }
+        .profile{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: red;
+            margin-bottom: 7px;
+            overflow: hidden;
+        }
+        .card h5{
+            margin-top: 3px;
+        }
+        .card p {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <form action="">
+            <input type="text" placeholder="Profile URL">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Occupation">
+            <input type="text" placeholder="Bio">
+            <input type="Submit" placeholder="Submit">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

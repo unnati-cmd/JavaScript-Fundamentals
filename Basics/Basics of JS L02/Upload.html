@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            width:100%;
+            height:100%;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            background-color: #222;
+            color:bisque;
+        }
+
+        #file_ip{
+            display:none;
+        }
+
+        #btn{
+            padding: 10px 20px;
+            font-size: 20px;
+            color:aliceblue;
+            border-radius: 10px;
+            background-color: royalblue;
+        }
+        #btn:hover{
+            background-color: rgb(32, 159, 191);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="file" id="file_ip">
+        <button id="btn">Upload</button>
+    </div>
+    <script src="Upload.js"></script>
+</body>
+</html>

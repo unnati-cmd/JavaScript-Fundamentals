@@ -86,7 +86,13 @@
 
 // console.log(BMI(1.7, 69).toFixed(2)); //precision set to 2 points
 
-hello();
-hello = function(){
-    console.log("Hello");
-}
+// hello();
+// hello = function(){
+//     console.log("Hello");
+// }
+
+let num = prompt("Enter a number: ");
+if(num === null) console.warn("You canceled.");
+else if(num.trim() === "") console.error("Spaces entered.");
+else if(!Number(num)) console.log("Enter only numbers");
+else console.log(`Age is ${num}`);

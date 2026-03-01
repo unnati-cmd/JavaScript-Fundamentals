@@ -79,9 +79,14 @@
 // console.log(`${count} is the sum of the digits of ${num}`);
 
 
-// BMI calculator
-function BMI(height,weight){
-    return (weight/(height**2));
-}
+// // BMI calculator
+// function BMI(height,weight){
+//     return (weight/(height**2));
+// }
 
-console.log(BMI(1.7, 69).toFixed(2)); //precision set to 2 points
+// console.log(BMI(1.7, 69).toFixed(2)); //precision set to 2 points
+
+hello();
+hello = function(){
+    console.log("Hello");
+}

@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('C:/Users/unnat/OneDrive/Desktop/Programs/DevOn/helvetica-255-webfont.zip');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica';
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height:100%;
+    background-color: #111;
+    color: white;
+}
+
+#nav{
+    padding: 10px 30px;
+}
+
+#nav a{
+    color: white;
+    font-size: 15px;
+    margin-right: 40px;
+    text-decoration: none;
+}
+
+#main>h1{
+    font-size: 250px;
+    padding-left: 40px;
+    font-weight: 100;
+}
+
+#btmlft{
+    width: 200px;
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    font-size: 10px;
+}
+
+#btmlft h3{
+    font-size: 15px;
+}
+
+#btmlft p{
+    margin-top: 5px;
+}
+
+#btmlft h4{
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+#bottombar{
+    display: flex;
+    justify-content: space-between;
+    font-size: 7px;
+    font-style: italic;
+    width: 100%;
+    padding: 20px 60px;
+    font-weight: 100;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#bottombar a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 13px;
+}

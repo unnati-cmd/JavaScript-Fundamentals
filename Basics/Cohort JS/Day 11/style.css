@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'P';
+    src: url('./Vetro\ DEMO.otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-image: url('https://plus.unsplash.com/premium_photo-1669842613532-1f0947aa6fa6?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+    text-align: center;
+}
+
+#main h3{
+    color: goldenrod;
+    font-size: 50px;
+    padding-top: 500px;
+    font-family: 'P'; 
+}
+
+#main button{
+    background-color: goldenrod;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}

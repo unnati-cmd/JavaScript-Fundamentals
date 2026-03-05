@@ -78,3 +78,24 @@ body{
     text-decoration: none;
     font-size: 13px;
 }
+
+#main>img{
+    position: absolute;
+    height: 250px;
+}
+#main #first{
+    height: 450;
+    top: 35%;
+    left: 60%;
+}
+
+#main #second{
+    top: 45%;
+    left: 40%;
+}
+
+#main #third{
+    height: 180px;
+    top: 63%;
+    left: 52%;
+}

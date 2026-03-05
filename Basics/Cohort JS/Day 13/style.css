@@ -23,6 +23,14 @@ body{
     color: white;
 }
 
+#one{
+    color: #fff;
+    font-size: 25px;
+    font-family: fantasy;
+    display: flex;
+    justify-content: center;
+}
+
 #nav{
     padding: 10px 30px;
 }

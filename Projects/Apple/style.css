@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'seb';
+    src: url(./sf-pro-text_semibold.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'seb';
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#nav{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    padding: 14px;
+    font-size: 12px;
+    gap: 40px;
+    color: #5c5c5e;
+    background-color: #FBFBFD;
+}
+
+#add p{
+    width: 100%;
+    height: 10%;
+    padding: 11px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 13px;
+}
+
+#center{
+    background-color: #F5F5F7;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    padding: 50px;
+    background-image: url('https://www.apple.com/v/home/cm/images/heroes/macbook-neo/hero_macbook_neo_announce__bby9lpmknpv6_small_2x.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+#center h2, #stack h2, #new h2{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#macair h2, #phone h2, #air h2, #watch h2, #trade h2, #pad h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#new h2, #new h4, #phone h4, #phone h2, #pad h2, #pad h4{
+    color:white;
+}
+
+#center h4, #stack h4, #new h4{
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+#macair h4, #air h4, #phone h4, #watch h4, #pad h4, #trade h4{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+#center p, #stack p, #new p{
+    font-size: 20px;
+    color: rgb(168, 164, 164);
+}
+
+#macair p, #air p, #phone p, #watch p{
+    font-size: 18px;
+    color: rgb(168, 164, 164);
+}
+
+#center button, #stack button, #new button, #macair button, #air button, #phone button, #watch button, #trade button, #pad button{
+    font-size: 15px;
+    margin-top: 20px;
+    margin-right: 15px;
+    padding: 10px 20px;
+}
+
+#learn{
+    background-color: #0070E6;
+    border: none;
+    border-radius: 20px;
+    color:white;
+}
+
+#Buy{
+    border: 1px solid #0070E6;
+    background-color: transparent;
+    color:#0070E6;
+    border-radius: 20px;
+}
+
+#Buy:hover{
+    background-color: #0070E6;
+    color: white;
+}
+
+#center #film{
+    margin-top: 100px;
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 20px;
+    border: none;
+    color: black;
+    background-color: rgba(255,255,255,0.8);
+}
+
+#stack{
+    margin-top: 20px;
+    background-color: #F5F5F7;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    padding: 60px;
+    background-image: url('https://www.apple.com/in/home/images/heroes/iphone-17e/hero_iphone_17e_preorder__cn2t90t11yoi_medium_2x.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#new{
+    margin-top: 20px;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    padding: 45px;
+    background-image: url('https://www.apple.com/v/home/cm/images/heroes/macbook-pro/hero_macbook_pro_preorder__b2ydddzj8y4i_small_2x.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#one, #two, #three{
+    position: relative;
+    background-color: white;
+    width: 98.3%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px 10px;
+    gap: 10px;
+}
+
+#macair , #phone, #pad{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    padding: 30px;
+}
+
+#macair{
+    background-image: url('https://www.apple.com/v/home/cm/images/promos/macbook-air-m5/promo_macbook_air_m5_preorder__bpanndgew0s2_medium_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#phone{
+    background-image: url('https://www.apple.com/v/home/cm/images/promos/iphone-17-pro/promo_iphone_17_pro__ywtbkeachg2e_medium_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#pad{
+    background-image: url('https://www.apple.com/v/home/cm/images/promos/ipad-pro/promo_ipad_pro__c529dk533k4m_small_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#air, #watch, #trade{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    padding: 50px;
+}
+
+#air{
+    background-image: url('https://www.apple.com/v/home/cm/images/promos/ipad-air-m4/promo_ipad_air_m4_preorder__fxdk8w5n7uq2_medium_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#watch{
+    background-image: url('https://www.apple.com/in/home/images/promos/apple-watch-series-11/promo_apple_watch_series_11__b63hxviqvonm_medium_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#trade{
+    background-image: url('https://www.apple.com/v/home/cm/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_medium_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#last{
+    margin-top: 40px;
+    background-color: #F5F5F7;
+    font-size: 12px;
+    color:#9a9aa2;
+    padding: 40px 100px;
+    text-align: justify;
+}

@@ -128,12 +128,12 @@ body {
     margin-top: 20px;
     background-color: #F5F5F7;
     width: 100%;
-    height: 80%;
+    height: 75%;
     display: flex;
     align-items: center;
     justify-content: top;
     flex-direction: column;
-    padding: 60px;
+    padding: 40px;
     background-image: url('https://www.apple.com/in/home/images/heroes/iphone-17e/hero_iphone_17e_preorder__cn2t90t11yoi_medium_2x.jpg');
     background-position: center;
     background-size: cover;

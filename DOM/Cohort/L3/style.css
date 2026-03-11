@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    overflow: hidden;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    background-color: goldenrod;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    z-index: 3;
+}
+
+button:active{
+    background-color: blanchedalmond;
+    color:black;
+}

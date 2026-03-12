@@ -51,7 +51,7 @@ forming.addEventListener('mouseover', () => {
     let x = Math.floor(Math.random()*80);
     circ.style.height = `${x}px`;
     circ.style.width = `${x}px`;
-    circ.style.border = '1px solid green';
+    circ.style.border = `${Math.floor(Math.random()*2 + 1)}px solid green`;
 
     circ.style.top = Math.floor(Math.random()*100 + 10) + '%';
     circ.style.left = Math.floor(Math.random()*100 + 10) + '%';

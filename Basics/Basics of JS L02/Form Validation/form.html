@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="form">
+        <form>
+            <input type="text" required minlength="3" maxlength="10" id="name" placeholder="&ast; Enter name: ">
+            <div id="nameError" class="error"></div>
+            <input required id="email" type="email" placeholder="&ast; Enter Email: ">
+            <div id="emailError" class="error"></div>
+            <input required id="password" placeholder="&ast; Enter Password: ">
+            <div id="passwdError" class="error"></div>
+            <select required>
+                <option disabled selected>Select your gender: </option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Others</option>
+            </select>
+            <textarea placeholder="Wanna say something?"></textarea>
+            <input id="submit" type="submit">
+        </form>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>

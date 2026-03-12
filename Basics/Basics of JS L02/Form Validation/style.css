@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    overflow: hidden;
+}
+
+#form{
+    height: 100%;
+    width: 100%;
+    background-color: #131330f7;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+}
+
+#form form{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 25px;
+    z-index: 2;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color:#0C1118;
+    box-shadow: 0px 0px 4px 7px rgba(174, 111, 233, 0.2);
+}
+
+form input, select, textarea{
+    border-radius: 5px;
+    border: none;
+    padding: 8px;
+    width: 98%;
+    font-size: 15px;
+    margin-bottom: 1%;
+}
+
+#submit{
+    margin-top: 20px;
+    background-color: #26A68B;
+    cursor: pointer;
+}
+
+#submit:active{
+    background-color: bisque;
+}
+
+.error{
+    font-size: 12px;
+    color: red;
+    display: none;
+    text-align: left;
+}

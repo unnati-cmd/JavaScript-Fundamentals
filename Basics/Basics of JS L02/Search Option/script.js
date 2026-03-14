@@ -38,41 +38,33 @@ let users = [
 
 function showUsers(arr) {
   arr.forEach(function (user) {
-    // Create outer card div
     const card = document.createElement("div");
     card.classList.add("card");
 
-    // Create image
     const img = document.createElement("img");
     img.src = user.pic;
     img.classList.add("bg-img");
 
-    // Create blurred-layer div
     const blurredLayer = document.createElement("div");
     blurredLayer.style.backgroundImage = `url(${user.pic})`;
     blurredLayer.classList.add("blurred-layer");
 
-    // Create content div
     const content = document.createElement("div");
     content.classList.add("content");
 
-    // Create h3 and paragraph
     const heading = document.createElement("h3");
     heading.textContent = user.name;
 
     const para = document.createElement("p");
     para.textContent = user.bio;
 
-    // Append heading and paragraph to content
     content.appendChild(heading);
     content.appendChild(para);
 
-    // Append all to card
     card.appendChild(img);
     card.appendChild(blurredLayer);
     card.appendChild(content);
 
-    // Finally, append card to the body or any container
     document.querySelector(".cards").appendChild(card);
   });
 }

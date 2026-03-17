@@ -2,12 +2,12 @@ let parent = document.querySelector('#parent');
 
 function Toaster(mesg){
         let toaster = document.createElement('div');
-        toaster.id = 'toaster';
+        toaster.classList.add('toaster');
         toaster.innerHTML = mesg;
-        document.body.appendChild(toaster);
+        parent.appendChild(toaster);
 
         setTimeout(() => {
-            document.body.removeChild(toaster);
+            parent.removeChild(toaster);
         }, 4000);
 }
 

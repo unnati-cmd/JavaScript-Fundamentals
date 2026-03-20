@@ -16,6 +16,12 @@ body{
     align-items: center;
 }
 
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
 .container{
     background-color: antiquewhite;
     padding: 2rem;
@@ -76,6 +82,9 @@ form input{
 
 .msg{
     margin: 2rem 0 2rem 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: larger;
 }
 
 form button{

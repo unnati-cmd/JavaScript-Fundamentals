@@ -17,3 +17,20 @@ function openFeatures(){
 }
 openFeatures();
 
+// To Do List JS
+let form = document.querySelector('.addTask form');
+let taskInput = document.querySelector('.addTask form #task-input');
+let taskDetailsInput = document.querySelector('.addTask form textarea');
+let taskCheckBox = document.querySelector('.addTask form #check')
+
+let allTask = [
+    {
+        task:'Mandir Jao',
+        details: 'Hanuman ji wale',
+        imp: true
+    },
+]
+
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+})

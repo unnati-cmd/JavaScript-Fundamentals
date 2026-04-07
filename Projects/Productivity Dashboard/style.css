@@ -139,12 +139,12 @@ section.allElems{
 }
 
 .todo-list-fullpage .todo-container{
-    height: 80%;
+    height: 85%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .todo-list-fullpage .todo-container .addTask{
@@ -152,6 +152,7 @@ section.allElems{
     height: 100%;
     background-color: #74512D;
     border-radius: 20px;
+    padding: 30px;
 }
 
 .todo-list-fullpage .todo-container .allTask{
@@ -161,17 +162,17 @@ section.allElems{
     border-radius: 20px;
 }
 
-.todo-list-fullpage .todo-container .addTask form{
+.todo-list-fullpage .todo-container .addTask form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 30px;
+    padding: 15px;
 }
 
-.todo-container .addTask form input{
-    padding: 10px 20px;
+.todo-container .addTask form #task-input{
+    padding: 15px 20px;
     width: 100%;
-    font-size: 28px;
+    font-size: 20px;
     background-color: var(--pri);
     color: var(--tri2);
     border-radius: 5px;
@@ -183,7 +184,7 @@ section.allElems{
 .todo-container .addTask form textarea{
     padding: 10px 20px;
     width: 100%;
-    font-size: 28px;
+    font-size: 20px;
     background-color: var(--pri);
     color: var(--tri2);
     border-radius: 5px;
@@ -195,7 +196,7 @@ section.allElems{
 .todo-container .addTask form button{
     padding: 10px 20px;
     width: 100%;
-    font-size: 28px;
+    font-size: 20px;
     background-color: var(--tri1);
     border-radius: 5px;
     border: none;
@@ -217,7 +218,7 @@ section.allElems{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 30px;
+    padding: 25px;
     overflow: auto;
 }
 
@@ -227,21 +228,39 @@ section.allElems{
     justify-content: space-between;
     width: 100%;
     background-color: var(--pri);
-    padding: 20px 30px;
+    padding: 10px 25px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
 
 .task h5{
     color: var(--sec);
-    font-size: 30px;
+    font-size: 18px;
 }
 
 .task button{
-    padding: 15px 30px;
+    padding: 10px 20px;
     color: var(--pri);
     background-color: green;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
     font-weight: 600;
+}
+
+.mark-imp{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.mark-imp input{
+    scale: 1.7;
+}
+
+.mark-imp label{
+    scale: 1.1;
+    margin-left: 25px;
 }

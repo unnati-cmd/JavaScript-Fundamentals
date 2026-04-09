@@ -228,7 +228,7 @@ section.allElems{
     justify-content: space-between;
     width: 100%;
     background-color: var(--pri);
-    padding: 10px 25px;
+    padding: 5px 25px;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -236,6 +236,30 @@ section.allElems{
 .task h5{
     color: var(--sec);
     font-size: 18px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+.task h5 span{
+    background-color: red;
+    color: var(--pri);
+    font-size: 12px;
+    border-radius: 50px;
+    padding: 2px 5px;
+}
+
+.task p{
+    color: var(--sec);
+    font-size: 12px;
+}
+
+.task h5 span.true{
+    opacity: 1;
+}
+.task h5 span.false{
+    opacity:0;
 }
 
 .task button{
@@ -245,6 +269,10 @@ section.allElems{
     border-radius: 10px;
     border: none;
     font-weight: 600;
+}
+
+.task button:active{
+    scale: 0.95;
 }
 
 .mark-imp{

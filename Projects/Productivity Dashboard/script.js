@@ -1,3 +1,4 @@
+// All Features JS
 function openFeatures(){
     var allElems = document.querySelectorAll('.elem');
     var FullElemsPage = document.querySelectorAll('.fullElements')
@@ -18,14 +19,14 @@ function openFeatures(){
 openFeatures();
 
 
-
 // To Do List JS
 function ToDoList(){
     let form = document.querySelector('.addTask form');
     var currentTask = []
     if(localStorage.getItem('currentTask')) {
         currentTask = JSON.parse(localStorage.getItem('currentTask'));
-    }else {
+    }
+    else {
         console.log('Task list is Empty.');
     }
 
@@ -80,3 +81,32 @@ function ToDoList(){
     })  
 }
 ToDoList();
+ 
+
+// Daily Planner JS
+function DailyPlanner(){
+    var wholeDaySum = '';
+    var dayPlanData = JSON.parse(localStorage.getItem('dayPlanData')) || {};
+    var hours = Array.from({length: 24},(elem, idx) =>`${0 + idx}:00 - ${1 + idx}:00`);
+    hours.forEach(function(elem, idx){
+        var savedData = dayPlanData[idx] || '';
+        wholeDaySum = wholeDaySum + `<div class='day-planner-time'>
+        <p>${elem}</p>
+        <input id=${idx} type='text' placeholder='...' value='${savedData}'>
+        </div>`
+    })
+
+    var dayPlanner =  document.querySelector('.day-planner');
+    dayPlanner.innerHTML = wholeDaySum;
+
+    var dayPlannerInput = document.querySelectorAll('.day-planner input');
+    dayPlannerInput.forEach(function(elem){
+        elem.addEventListener('input',function(){
+            dayPlanData[elem.id] = elem.value;
+            localStorage.setItem('dayPlanData', JSON.stringify(dayPlanData));
+        })
+    })
+}
+DailyPlanner();
+
+

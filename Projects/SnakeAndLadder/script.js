@@ -2,6 +2,10 @@ const board = document.querySelector('.board');
 const scoreElement = document.querySelector('#score');
 const highScoreElement = document.querySelector('#high-score');
 const timeElement = document.querySelector('#time');
+const startButton = document.querySelector('.btn-start');
+const modal = document.querySelector('.modal');
+
+let IntervalId;
 
 // Block height and width
 const blockHeight = 80
@@ -18,6 +22,15 @@ let snake = [
 
 let direction = 'left';
 let food = {x: Math.floor(Math.random()*rows), y:Math.floor(Math.random()*cols)}; 
+
+startButton.addEventListener('click',function(){
+    modal.style.display = 'none';
+    IntervalId = setInterval(()=>{
+        render();
+    }, 400) 
+})
+
+
 
 addEventListener("keydown", function(dets){
     if(dets.key === 'ArrowUp'){
@@ -59,7 +72,7 @@ function render(){
     }
 
     if(head.x < 0 || head.x >= rows || head.y < 0 || head.y >= cols) {
-        alert("Ga me Over!");
+        alert("Game Over!");
         clearInterval(IntervalId);
         location.reload();
     }
@@ -83,7 +96,3 @@ function render(){
         blocks[`${segment.x}-${segment.y}`].classList.add('fill');
     })
 }
-
-let IntervalId = setInterval(()=>{
-    render();
-}, 400)

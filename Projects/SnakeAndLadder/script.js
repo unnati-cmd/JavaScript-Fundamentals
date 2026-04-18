@@ -6,10 +6,16 @@ const startButton = document.querySelector('.btn-start');
 const modal = document.querySelector('.modal');
 
 let IntervalId;
+let timerIntervalId = null;
 
 // Block height and width
 const blockHeight = 80
 const blockWidth = 80
+
+let highScore = localStorage.getItem('highScore') ? JSON.parse(localStorage.getItem('highScore')) : 0;
+highScoreElement.innerText = `${highScore}`;
+let score = 0
+let time = `00:00`
 
 // Number of rows and columns
 const cols = Math.floor(board.clientWidth / blockWidth);
@@ -27,10 +33,20 @@ startButton.addEventListener('click',function(){
     modal.style.display = 'none';
     IntervalId = setInterval(()=>{
         render();
-    }, 400) 
+    }, 300) 
+    timerIntervalId = setInterval(()=>{
+        let[min, sec] = time.split(':').map(Number);
+        if(sec==59){
+            min+=1;
+            sec=0;
+        }else{
+            sec+=1;
+        }
+        time = `${min}:${sec}`;
+        timeElement.innerText = time;
+    }, 1000)
 })
 
-// listen to keydown event and change the direction of snake accordingly
 addEventListener("keydown", function(dets){
     if(dets.key === 'ArrowUp'){
         direction = 'up';
@@ -46,18 +62,15 @@ addEventListener("keydown", function(dets){
     }
 })
 
-// create blocks and add to the board
 for(let i = 0; i<rows; i++){
     for(let j = 0; j<cols; j++){
         const block = document.createElement('div');
         block.classList.add('block');
         board.appendChild(block);
-        block.innerText = `${i}-${j}`;
         blocks[`${i}-${j}`] = block;
     }
 }
 
-// render the snake and food for the first time
 function render(){
     // calculate snake head again and again
     let head = null
@@ -72,7 +85,7 @@ function render(){
         head = {x: snake[0].x - 1, y: snake[0].y}
     }
 
-    if(head.x < 0 || head.x >= rows || head.y < 0 || head.y >= cols || blocks[`${head.x}-${head.y}`].classList.contains('fill')){ {
+    if(head.x < 0 || head.x >= rows || head.y < 0 || head.y >= cols) {
         alert("Game Over!");
         clearInterval(IntervalId);
         location.reload();
@@ -85,11 +98,22 @@ function render(){
     snake.unshift(head);
     snake.pop();
 
+    // check if snake head is on food
     if(head.x == food.x && head.y == food.y){
         blocks[`${food.x}-${food.y}`].classList.remove('food');
         food = {x: Math.floor(Math.random()*rows), y:Math.floor(Math.random()*cols)}; 
         blocks[`${food.x}-${food.y}`].classList.add('food');
         snake.unshift(head);
+
+        score+=10;
+        scoreElement.innerText = `${score}`;
+        timeElement.innerText = `${time}`;
+        if(score > highScore){
+            highScore = score;
+            localStorage.setItem('highScore', JSON.stringify(highScore));
+            highScoreElement.innerText = `${highScore}`;
+        }
+
     }
 
     snake.forEach(segment=>{

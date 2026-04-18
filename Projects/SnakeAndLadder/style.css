@@ -84,7 +84,6 @@ section .infos {
 }
 
 .board{
-    border: 1px solid var(--border-primary-color);
     flex-grow:1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
@@ -92,7 +91,8 @@ section .infos {
 }
 
 .block{
-    border: 1px solid var(--border-primary-color);
+    border-radius: 50%;
+    border: 1.5px solid var(--border-primary-color);
 }
 
 .fill{
@@ -108,7 +108,7 @@ section .infos {
     width: 100vw;
     position: absolute;
     top: 0;
-    background-color: rgba(81, 145, 201, 0.9);
+    background-color: rgba(81, 145, 201, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;

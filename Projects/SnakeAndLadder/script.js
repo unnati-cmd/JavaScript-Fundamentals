@@ -30,8 +30,7 @@ startButton.addEventListener('click',function(){
     }, 400) 
 })
 
-
-
+// listen to keydown event and change the direction of snake accordingly
 addEventListener("keydown", function(dets){
     if(dets.key === 'ArrowUp'){
         direction = 'up';
@@ -47,6 +46,7 @@ addEventListener("keydown", function(dets){
     }
 })
 
+// create blocks and add to the board
 for(let i = 0; i<rows; i++){
     for(let j = 0; j<cols; j++){
         const block = document.createElement('div');
@@ -57,6 +57,7 @@ for(let i = 0; i<rows; i++){
     }
 }
 
+// render the snake and food for the first time
 function render(){
     // calculate snake head again and again
     let head = null
@@ -71,7 +72,7 @@ function render(){
         head = {x: snake[0].x - 1, y: snake[0].y}
     }
 
-    if(head.x < 0 || head.x >= rows || head.y < 0 || head.y >= cols) {
+    if(head.x < 0 || head.x >= rows || head.y < 0 || head.y >= cols || blocks[`${head.x}-${head.y}`].classList.contains('fill')){ {
         alert("Game Over!");
         clearInterval(IntervalId);
         location.reload();
@@ -89,7 +90,6 @@ function render(){
         food = {x: Math.floor(Math.random()*rows), y:Math.floor(Math.random()*cols)}; 
         blocks[`${food.x}-${food.y}`].classList.add('food');
         snake.unshift(head);
-
     }
 
     snake.forEach(segment=>{

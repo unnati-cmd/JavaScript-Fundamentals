@@ -21,7 +21,10 @@ let time = `00:00`
 const cols = Math.floor(board.clientWidth / blockWidth);
 const rows = Math.floor(board.clientHeight / blockHeight);
 
+// 2D array to store blocks
 const blocks = []
+
+// array to store snake body segments, initially snake has only one segment at position (1,3)
 let snake = [
     {x:1, y:3}, 
 ];
@@ -29,6 +32,7 @@ let snake = [
 let direction = 'left';
 let food = {x: Math.floor(Math.random()*rows), y:Math.floor(Math.random()*cols)}; 
 
+// start the game when start button is clicked
 startButton.addEventListener('click',function(){
     modal.style.display = 'none';
     IntervalId = setInterval(()=>{
@@ -47,6 +51,7 @@ startButton.addEventListener('click',function(){
     }, 1000)
 })
 
+// listen to arrow keys to change direction of snake
 addEventListener("keydown", function(dets){
     if(dets.key === 'ArrowUp'){
         direction = 'up';
@@ -62,6 +67,7 @@ addEventListener("keydown", function(dets){
     }
 })
 
+// create blocks for the board
 for(let i = 0; i<rows; i++){
     for(let j = 0; j<cols; j++){
         const block = document.createElement('div');
@@ -71,6 +77,12 @@ for(let i = 0; i<rows; i++){
     }
 }
 
+// check if snake head is colliding with its body
+function isSelfCollision(head){
+    return snake.some(segment=> segment.x === head.x && segment.y === head.y);
+}
+
+// render the snake and food on the board
 function render(){
     // calculate snake head again and again
     let head = null
@@ -85,7 +97,7 @@ function render(){
         head = {x: snake[0].x - 1, y: snake[0].y}
     }
 
-    if(head.x < 0 || head.x >= rows || head.y < 0 || head.y >= cols) {
+    if(head.x < 0 || head.x >= rows || head.y < 0 || head.y >= cols || isSelfCollision(head)) {
         alert("Game Over!");
         clearInterval(IntervalId);
         location.reload();
@@ -116,6 +128,7 @@ function render(){
 
     }
 
+    // render the snake
     snake.forEach(segment=>{
         blocks[`${segment.x}-${segment.y}`].classList.add('fill');
     })
